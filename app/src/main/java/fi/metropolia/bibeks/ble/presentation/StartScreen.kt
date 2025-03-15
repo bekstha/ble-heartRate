@@ -31,7 +31,7 @@ fun StartScreen(
                 .clip(CircleShape)
                 .background(Color.Blue, CircleShape)
                 .clickable {
-                    navController.navigate(Screen.HeartRateScreen.route){
+                    navController.navigate(Screen.PressureScreen.route){
                         popUpTo(Screen.StartScreen.route){
                             inclusive = true
                         }

@@ -15,8 +15,8 @@ fun Navigation(
         composable(Screen.StartScreen.route){
             StartScreen(navController = navController)
         }
-        composable(Screen.HeartRateScreen.route){
-            HeartRateScreen (onBluetoothStateChanged)
+        composable(Screen.PressureScreen.route){
+            DataScreen (onBluetoothStateChanged)
         }
     }
 }
@@ -25,5 +25,7 @@ sealed class Screen(val route: String) {
     object  StartScreen: Screen("start_screen")
     object  TemperatureHumidityScreen: Screen("temp_humid_screen")
     object  HeartRateScreen: Screen("heart_rate_screen")
+    object  PressureScreen: Screen("pressure_screen")
+    object  DataScreen: Screen("data_screen")
 
 }

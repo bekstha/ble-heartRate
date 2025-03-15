@@ -24,6 +24,8 @@ import kotlinx.coroutines.launch
 import java.util.UUID
 import javax.inject.Inject
 
+
+
 @SuppressLint("MissingPermission")
 class TemperatureAndHumidityBLEReceiveManager @Inject constructor(
     private val bluetoothAdapter: BluetoothAdapter,
@@ -105,7 +107,7 @@ class TemperatureAndHumidityBLEReceiveManager @Inject constructor(
 
         override fun onServicesDiscovered(gatt: BluetoothGatt, status: Int) {
             with(gatt) {
-                printGattTable()
+                //printGattTable()
                 coroutineScope.launch {
                     data.emit(Resource.Loading(message = "Adjusting MTU space..."))
                 }
